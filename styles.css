@@ -1,0 +1,295 @@
+ /* Global Styles */
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+    body {
+        font-family: Ubuntu, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+
+    h1, h2 {
+        color: white;
+    }
+    h1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+    }
+    h1 img{
+        width:50px;
+    }
+    /* Header Styles */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: lightseagreen;
+        color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    header div {
+        display: block; 
+    }
+
+    header button {
+        background-color: #20b2aa;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+
+    header button:hover {
+        background-color: #1e998f;
+    }
+
+    /* Main Layout */
+    main {
+        display: block;
+        height: calc(100vh - 60px);
+    }
+
+    main.visible {
+        display: flex; 
+    }
+
+    /* Left Pane */
+    #left {
+        min-width: 200px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+
+    #left h2 {
+        margin-bottom: 10px;
+        color: lightseagreen;
+    }
+
+    #spreadsheet-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #spreadsheet-list li {
+        padding: 10px;
+        background-color: #e0f7f9;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #spreadsheet-list li:hover {
+        background-color: #cceeee;
+    }
+
+    #left input {
+        width: calc(100% - 80px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    #left button, #right button {
+        padding: 8px 12px;
+        background-color: lightseagreen;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #left button:hover {
+        background-color: #1e998f;
+    }
+
+    /* Right Pane */
+    #right {
+        flex: 1;
+        padding: 20px;
+        overflow-y: scroll;
+    }
+
+    #spreadsheet-container {
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #spreadsheet-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    #spreadsheet-container th, #spreadsheet-container td {
+        border: 1px solid #ddd;
+        padding: 0px;
+        text-align: center;
+    }
+
+    #spreadsheet-container th {
+        background-color: lightseagreen;
+        color: white;
+    }
+
+    #spreadsheet-container input[type="text"] {
+        width: 100%;
+        border: none;
+        background-color: #f9f9f9;
+        padding: 5px;
+        text-align: center;
+    }
+
+    #spreadsheet-container input[type="text"]:focus {
+        outline: 2px solid lightseagreen;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        main {
+            flex-direction: column;
+        }
+
+        #left {
+            width: 100%;
+            box-shadow: none;
+        }
+
+        #right {
+            padding: 10px;
+        }
+    }
+
+    #aplicacion {
+        display: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body, main {
+        overflow: hidden;
+    }
+
+    #loginsignup {
+        display: none;
+    }
+
+    /* Login and Signup Section */
+    #loginsignup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 60px);
+        background-color: #f4f4f9;
+        gap: 20px;
+    }
+
+    #loginsignup div {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+    }
+
+    #loginsignup h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: lightseagreen;
+    }
+
+    #loginsignup input {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    #loginsignup button {
+        width: 100%;
+        padding: 10px;
+        background-color: lightseagreen;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #loginsignup button:hover {
+        background-color: #1e998f;
+    }
+
+    /* Highlighted Header Styles */
+    th.highlight {
+        background-color: #ffd700 !important; /* Gold color for highlight */
+        color: black !important; /* Contrast text color */
+    }
+    /* Sheet Tabs Styles */
+#sheets-tabs {
+    margin-bottom: 10px;
+}
+
+.sheet-tab {
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #e0f7f9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sheet-tab:hover {
+    background-color: #cceeee;
+}
+
+.sheet-tab.active-tab {
+    background-color: lightseagreen;
+    color: white;
+}
+
+/* Rename and Delete Buttons */
+.sheet-tab button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sheet-tab button:hover {
+    color: red;
+}
+
